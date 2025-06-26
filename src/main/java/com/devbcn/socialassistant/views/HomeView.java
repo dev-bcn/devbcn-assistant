@@ -57,8 +57,17 @@ public class HomeView extends VerticalLayout {
         add(new Paragraph("This is the home view"));
 
         List<MessageListItem> items = new ArrayList<>();
-        items.add(new MessageListItem("This is **DevBcn** assistant [website](https://www.devbcn.com/), please enter your prompt", Instant.now(), SOCIAL_ASSISTANT));
+        items.add(new MessageListItem("""
+                # DevBcn Assistant
+                I can help you with:
+                * Creating Mailchimp newsletters according to best practices.
+                * Retrieve speaker and session information from official API.
+                * Prepare social media posts for Speakers.
+                
+                Please enter your prompt
+                """, Instant.now(), SOCIAL_ASSISTANT));
         messageList.setItems(items);
+        messageList.setMarkdown(true);
         messageList.getStyle().setWidth("100%");
 
         MessageInput input = new MessageInput();

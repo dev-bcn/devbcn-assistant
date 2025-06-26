@@ -20,7 +20,7 @@ public class SpeakerService {
     }
 
     public Speaker[] fetchSpeakers() {
-        logger.info("Fetching speakers...");
+        logger.info("Fetching all speakers from API");
         String url = "https://sessionize.com/api/v2/xhudniix/view/Speakers";
         ResponseEntity<Speaker[]> response = restTemplate.getForEntity(url, Speaker[].class);
 

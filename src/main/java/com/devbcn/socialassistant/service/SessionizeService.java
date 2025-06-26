@@ -42,13 +42,13 @@ public class SessionizeService {
 
     @Tool(description = "Retrieve speaker information by its name")
     Speaker getSpeakerInfo(String speakerName) {
-        logger.info("Retrieve Speaker by name: {}", speakerName);
+        logger.info("Getting speaker by name: {}", speakerName);
         return speakerService.fetchSpeaker(speakerName);
     }
 
     @Tool(description = "Retrieve session information by its UUID")
     Session getSessionInfo(String sessionId) {
-        logger.info("Session ID: {}", sessionId);
+        logger.info("Getting session by ID: {}", sessionId);
         return sessionService.getSessionById(sessionId);
     }
 }
