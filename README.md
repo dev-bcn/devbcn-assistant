@@ -123,7 +123,7 @@ mvn test
 
 ## License
 
-[MIT](LICENSE.md)
+[MIT](LICENSE)
 
 ## Contributors
 
